@@ -37,13 +37,3 @@ def ask_question(data: Question):
         "answer": response.output_text
     }
 
-@app.get("/tell")
-def tell_answer():
-    response = client.responses.create(
-        model="gpt-5-mini",
-        input="Tell me a joke."
-    )
-
-    return {
-        "answer": response.output_text
-    }

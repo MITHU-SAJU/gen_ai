@@ -13,9 +13,12 @@ function App() {
     try {
       setLoading(true);
 
-      const response = await axios.post("http://localhost:8000/ask", {
-        question: question,
-      });
+      const response = await axios.post(
+        "https://gen-ai-ge2n.onrender.com/ask",
+        {
+          question: question,
+        },
+      );
 
       setAnswer(response.data.answer);
     } catch (error) {
